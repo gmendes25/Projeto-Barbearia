@@ -11,15 +11,16 @@ import javax.swing.text.MaskFormatter;
 
 public class Cliente {
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	private String name;
 	private String telefone;
 	private Date aniversario;
 	
-	public Cliente(String name, String telefone, String aniversario) throws ParseException {
+	public Cliente(String name, String telefone, Date aniversario) throws ParseException {
 		this.name = name;
 		this.telefone = telefone;
-		this.aniversario = sdf.parse(aniversario);
+		this.aniversario = aniversario;
 	}
 
 	public String getName() {

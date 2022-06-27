@@ -2,6 +2,7 @@ package entities;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Barbeiro extends Cliente {
@@ -21,7 +22,7 @@ public class Barbeiro extends Cliente {
 		clientes.remove(cliente);
 	}
 	
-	public Barbeiro(String name, String telefone, String aniversario, String email, String cpf) throws ParseException {
+	public Barbeiro(String name, String telefone, Date aniversario, String email, String cpf) throws ParseException {
 		super(name, telefone, aniversario);
 		this.email = email;
 		this.cpf = String.format(cpf, "###.###.###-##");
